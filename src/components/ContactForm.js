@@ -21,7 +21,7 @@ const ContactForm = () => {
             }}
             onSubmit={handleSubmit}
             validate={validateContactForm}
-            >
+        >
             <Form>
                 <FormGroup row>
                     <Label htmlFor='firstName' md='2'>
@@ -33,7 +33,7 @@ const ContactForm = () => {
                             placeholder='First Name'
                             name='firstName'
                         />
-                         <ErrorMessage name='firstName'>
+                        <ErrorMessage name='firstName'>
                             {(msg) => <p className='text-danger'>{msg}</p>}
                         </ErrorMessage>
                     </Col>
