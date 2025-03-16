@@ -7,16 +7,25 @@ import Loading from '../../components/Loading';
 
 const CampsitesList = () => {
     const campsites = useSelector(selectAllCampsites);
-    //console.log('campsites:', campsites);
+    console.log('campsites:', campsites);
+
     const isLoading = useSelector((state) => state.campsites.isLoading);
     const errMsg = useSelector((state) => state.campsites.errMsg);
 
     if (isLoading) {
-        return <Loading />; // Assume Loading is a component to show a loading indicator
+        return (
+            <Row>
+                <Loading />
+            </Row>
+        );
     }
 
     if (errMsg) {
-        return <Error message={errMsg} />; // Assume Error component takes an error message as a prop
+        return (
+            <Row>
+                <Error errMsg={errMsg} />
+            </Row>
+        );
     }
 
     return (

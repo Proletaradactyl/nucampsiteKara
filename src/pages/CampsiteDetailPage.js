@@ -35,7 +35,7 @@ const CampsiteDetailPage = () => {
             {campsite && <SubHeader current={campsite.name} detail={true} />}
             <Row>{content}</Row>
         </Container>
-    );
+    )
 };
 
 export default CampsiteDetailPage;
